@@ -1,0 +1,29 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: ./frontend-react
+    volumes:
+      - ./frontend-react:/app
+    ports:
+      - "3000:3000"
+  backend:
+    build:
+      context: ./backend-django
+    depends_on:
+      - database
+    volumes:
+      - ./backend-django:/app
+    ports:
+      - "8000:8000"
+      - "5678:5678"
+  database:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=raslandb1
+    volumes:
+      - raslan-db-disk:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  raslan-db-disk:

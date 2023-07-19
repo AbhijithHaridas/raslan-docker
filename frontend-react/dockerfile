@@ -1,0 +1,9 @@
+#Use the official Node.js base image
+FROM node:18
+
+WORKDIR /app
+
+COPY . .
+
+#Command to to start raslan-ui App
+CMD [ "npm", "start" ]
