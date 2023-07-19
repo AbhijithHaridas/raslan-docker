@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'raslanAPI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'test',
+        'NAME': 'raslan_db',
         'USER': 'postgres',
         'PASSWORD': 'raslandb1',
         'HOST': 'database'

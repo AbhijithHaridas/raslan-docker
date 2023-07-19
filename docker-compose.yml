@@ -21,6 +21,7 @@ services:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=raslandb1
+      - POSTGRES_DB=raslan_db
     volumes:
       - raslan-db-disk:/var/lib/postgresql/data
     ports:
